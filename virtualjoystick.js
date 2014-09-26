@@ -233,6 +233,7 @@ VirtualJoystick.prototype._onMouseMove	= function(event)
 {
 	var x	= event.clientX;
 	var y	= event.clientY;
+	this.dispatchEvent('touchMove', event);
 	return this._onMove(x, y);
 }
 
@@ -301,6 +302,7 @@ VirtualJoystick.prototype._onTouchMove	= function(event)
 	var touch	= touchList[i];
 
 	event.preventDefault();
+	this.dispatchEvent('touchMove', event);
 
 	var x		= touch.pageX;
 	var y		= touch.pageY;
