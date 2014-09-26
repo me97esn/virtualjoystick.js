@@ -14,6 +14,7 @@ var VirtualJoystick	= function(opts)
 	this._useCssTransform	= opts.useCssTransform !== undefined ? opts.useCssTransform : false
 
 	this._container.style.position	= "relative"
+	this._container.style['z-index'] = 100
 
 	this._container.appendChild(this._baseEl)
 	this._baseEl.style.position	= "absolute"
