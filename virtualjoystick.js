@@ -226,6 +226,9 @@ VirtualJoystick.prototype._onMouseDown	= function(event)
 	event.preventDefault();
 	var x	= event.clientX;
 	var y	= event.clientY;
+
+	this.dispatchEvent('touchStart', event);
+	
 	return this._onDown(x, y);
 }
 
